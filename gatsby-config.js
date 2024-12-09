@@ -3,7 +3,24 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `My Gatsby Site`,
+    title: `My Site`,
   },
-  plugins: ["gatsby-plugin-image", "gatsby-plugin-sharp"],
+  plugins: [
+    "gatsby-plugin-image",
+    "gatsby-plugin-sharp",
+    {
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: `pages`,
+        path: `${__dirname}/src/pages/`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `blog`,
+        path: `${__dirname}/blog/`,
+      },
+    },
+  ],
 };
