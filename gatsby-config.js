@@ -3,7 +3,7 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `My Site`,
+    title: `Gatsby JS`,
   },
   plugins: [
     "gatsby-plugin-image",
@@ -22,5 +22,6 @@ module.exports = {
         path: `${__dirname}/blog/`,
       },
     },
+    "gatsby-plugin-mdx",
   ],
 };
